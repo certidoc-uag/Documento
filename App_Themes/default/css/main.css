@@ -1,0 +1,572 @@
+/*Tag*/
+html, body {
+    margin: 0;
+    font-size: 14px;
+    font-family: Arial;
+    color: #4A4A4A
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*GenÃ©ricos*/
+.cursor-bloqueo {
+    cursor: not-allowed
+}
+
+.ancho {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.ancho-total {
+    width: 100%
+}
+
+.ancho-justo {
+    white-space: nowrap;
+    width: 1px
+}
+
+.color-tinto {
+    color: #79232E
+}
+
+.color-amarillo {
+    color: #F38A00
+}
+
+.color-rojo {
+    color: #A94442
+}
+
+.boton-link {
+    color: #79232E;
+    text-transform: uppercase;
+    background: inherit;
+    border: none;
+    font-weight: bold;
+    text-align: right;
+    font-size: 1rem;
+    text-decoration: none
+}
+
+    .boton-link:hover {
+        text-decoration: underline;
+        cursor: pointer
+    }
+
+.boton {
+    min-width: 150px;
+    height: 40px;
+    display: inline-block;
+    background: #CCC;
+    color: #888;
+    text-align: center;
+    line-height: 40px;
+    text-transform: uppercase;
+    padding: 0 5px;
+}
+
+.boton-seleccion {
+    background-color: #79232E;
+    box-shadow: 0px 2px 3px #BBB;
+    color: white;
+    cursor: pointer;
+    vertical-align: top
+}
+
+    .boton-seleccion a {
+        color: #FFFFFF !important
+    }
+
+a:hover {
+    color: #FFFFFF !important;
+}
+
+.contenedor-editar-monto {
+    cursor: pointer
+}
+
+    .contenedor-editar-monto input {
+        display: none;
+        border-radius: 5px;
+        padding: 2px;
+        font-size: 1rem;
+        border: 1px solid #CCC;
+        width: 80px
+    }
+
+.frame-limpio {
+    margin: 40px 0 20px
+}
+
+    .frame-limpio .regresar {
+        padding-right: 15px
+    }
+
+.frame {
+    background: #FAFAFA;
+    border-radius: 4px;
+    box-shadow: 0px 2px 3px #BBB;
+    border: 1px solid #EEE;
+    margin: 20px 0
+}
+
+    .frame header.titulo {
+        padding: 8px
+    }
+
+        .frame header.titulo > * {
+            padding: 8px
+        }
+
+    .frame section.registros {
+        overflow: hidden
+    }
+
+        .frame section.registros table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            height: 0
+        }
+
+        .frame section.registros td {
+            border-top: 1px solid #CCC;
+            padding: 15px
+        }
+
+        .frame section.registros .no-border {
+            border: none
+        }
+
+        .frame section.registros .eliminar {
+            cursor: pointer
+        }
+
+    .frame input[type=checkbox] {
+        margin: 0
+    }
+
+    .frame .flecha-abierto {
+        background-image: url(../img/abierto.png);
+        width: 12px;
+        height: 8px
+    }
+
+    .frame .flecha-cerrado {
+        background-image: url(../img/cerrado.png);
+        width: 12px;
+        height: 8px
+    }
+
+    .frame .flecha {
+        cursor: pointer
+    }
+
+    .frame h2,
+    .frame-limpio h2 {
+        font-size: 1.2rem
+    }
+
+    .frame header.titulo,
+    .frame-limpio header.titulo {
+        width: 100%;
+        display: table
+    }
+
+        .frame header.titulo > *,
+        .frame-limpio header.titulo > * {
+            display: table-cell;
+            vertical-align: middle
+        }
+
+        .frame:not(.animado) header.titulo > :last-child,
+        .frame-limpio header.titulo > :last-child {
+            text-align: right;
+        }
+
+/*Template*/
+.header {
+    background-color: #79232E;
+    padding: 20px;
+    color: white;
+    box-shadow: 0px 2px 10px #888888;
+}
+
+.height > section {
+    display: table
+}
+
+.header > section > * {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 15px
+}
+
+.header figure {
+    margin: 0
+}
+
+    .header figure img {
+        height: 60px;
+    }
+
+.header h2 {
+    margin: 0;
+    font-size: 1.5rem
+}
+
+.mensajes {
+    font-size: .85rem
+}
+
+    .mensajes ul {
+        padding: 0
+    }
+
+.contenido {
+    padding: 40px 100px
+}
+
+/*Resumen*/
+.metodos-pago > * {
+    display: table;
+    width: 100%;
+    text-align: left;
+}
+
+    .metodos-pago > * > * {
+        display: table-cell
+    }
+
+    .metodos-pago > * > :nth-child(1) {
+        width: 110px
+    }
+
+    .metodos-pago > * > :nth-child(2) {
+        padding: 0 40px
+    }
+
+    .metodos-pago > * > :nth-child(3) {
+        vertical-align: middle;
+        text-align: right
+    }
+
+.metodos-pago h3 {
+    font-size: 1.3rem
+}
+
+.metodo-pago {
+    width: 167px;
+    height: 160px;
+    padding: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #CCC;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    position: relative;
+}
+
+    .metodo-pago h4 {
+        margin: 0;
+        font-size: 1.3rem;
+        color: #9B9B9B;
+        font-weight: normal
+    }
+
+    .metodo-pago div {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        text-align: center
+    }
+
+    .metodo-pago img {
+        vertical-align: middle;
+        margin: 0 4px
+    }
+
+    .metodo-pago:hover,
+    .metodos-pago .seleccion {
+        border-color: #F38A00
+    }
+
+        .metodo-pago:hover h4,
+        .metodos-pago .seleccion h4 {
+            color: #F38A00
+        }
+
+/*Referencia*/
+.referencia-acciones {
+    margin: 20px 0
+}
+
+    .referencia-acciones img {
+        vertical-align: bottom
+    }
+
+    .referencia-acciones span {
+        margin-left: 5px;
+        margin-right: 40px
+    }
+
+/*Animaciones*/
+.linear {
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transform: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+/* Tooltip eliminar*/
+.tip + .tooltip > .tooltip-inner {
+    background-color: #707070;
+    color: #FFFFFF;
+    padding: 8px
+}
+
+.tip + .tooltip.bottom > .tooltip-arrow {
+    border-bottom: none
+}
+
+/*Queries*/
+@media only screen and (max-width: 1000px) {
+    .contenido {
+        padding: 40px
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    html, body {
+        font-size: 13px
+    }
+
+    .header {
+        padding: 0
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    html, body {
+        font-size: 12px
+    }
+
+    .header > section > * {
+        padding: 10px
+    }
+
+    .contenido {
+        padding: 10px
+    }
+
+    .metodos-pago > * > * {
+        padding: 0;
+        display: block;
+        text-align: center
+    }
+
+    .metodos-pago > * > :nth-child(1) {
+        width: 100%
+    }
+
+    .metodos-pago > * > :nth-child(3) {
+        text-align: center
+    }
+
+    .metodo-pago {
+        margin-right: 0
+    }
+
+    .frame header.titulo {
+        padding: 3px
+    }
+
+    .frame:not(.animado) header.titulo > *,
+    .frame-limpio header.titulo > * {
+        display: block;
+    }
+
+    .frame:not(.animado) header.titulo > *,
+    .frame:not(.animado) header.titulo > :last-child,
+    .frame-limpio header.titulo > *,
+    .frame-limpio header.titulo > :last-child {
+        text-align: center
+    }
+
+    .frame section.registros table table,
+    .frame section.registros table thead,
+    .frame section.registros table tbody,
+    .frame section.registros table th,
+    .frame section.registros table td,
+    .frame section.registros table tr {
+        display: block
+    }
+
+        .frame section.registros table thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px
+        }
+
+    .frame section.registros table tr {
+        border-top: 1px solid #DDD
+    }
+
+    .frame section.registros table tbody td {
+        border: none !important;
+        position: relative;
+        padding-top: 5% !important;
+        white-space: normal;
+        text-align: right;
+    }
+
+    .frame section.registros table td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 50%;
+        padding-right: 10px;
+        text-align: left;
+        font-weight: bold;
+        content: attr(data-title);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+a {
+    color: #4A4A4A;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
+#btnRealizarPago {
+    color: #FFFFFF;
+}
+
+#lnkVerReferencia,
+#btnRealizarPago {
+    color: #888888;
+}
+
+.error404 {
+    display: table;
+    max-width: 1000px;
+    margin: 40px auto
+}
+
+    .error404 > * {
+        display: table-cell;
+        text-align: center
+    }
+
+    .error404 h1 {
+        font-size: 1.4rem
+    }
+
+    .error404 ul {
+        text-align: left;
+    }
+
+.HeaderNombre {
+    width: 70%;
+    display: inline-block;
+}
+
+.HeaderFecha {
+    display: inline-block;
+    float: right;
+}
+
+.HeaderContenedor {
+    width: 100%;
+}
+
+.textoDerecha {
+    text-align: right;
+}
+
+.textoCentrar {
+    text-align: center;
+}
+
+.negritas {
+    font-weight: bold;
+}
+
+.contenedorBuscar {
+    border: 1px solid #ccc;
+    padding: 50px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+    .contenedorBuscar h1 {
+        margin-bottom: 30px;
+    }
+
+    .contenedorBuscar input {
+        width: 300px;
+        padding: 10px;
+    }
+
+.contenedorResultado {
+    border: 1px solid #ccc;
+    padding: 50px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.contenedorCampos {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.nombreCampo {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+}
+
+.valorCampo {
+    display: inline-block;
+    width: 49%;
+    text-align: left;
+}
+
+.contenedorQR {
+    width: 200px;
+    display: inline-block;
+}
+
+.contenedorSello {
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+
+    .contenedorSello div {
+        margin-bottom: 10px;
+    }
+
+.contenedorPie {
+    margin-top: 10px;
+}
+
+.contenedorCamposGeneral {
+    margin: 20px 0;
+}
