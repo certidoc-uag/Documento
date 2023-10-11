@@ -138,3 +138,6 @@ function Notificacion(titulo, contenido, btnAceptar) {
         confirmButton: btnAceptar
     });
 }
+
+let tDay = new Date().getDate();
+$("#lblFecha").html(tDay + " OCTUBRE 2023");
