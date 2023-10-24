@@ -140,4 +140,9 @@ function Notificacion(titulo, contenido, btnAceptar) {
 }
 
 let tDay = new Date().getDate();
-$("#lblFecha").html(tDay + " OCTUBRE 2023");
+let tMonth = new Date().getMonth();
+let tYear = new Date().getFullYear();
+
+const monthNames = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"];
+
+$("#lblFecha").html(tDay + " " + monthNames[tMonth] + " " + tYear);
